@@ -72,7 +72,7 @@ body {
   display: none;
 }
 
-/* Main */
+/* Main home */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -112,9 +112,11 @@ body {
 }
 
 .hero .home-img {
-  padding-top: 1rem;
-  padding-right: 5rem;
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
 }
+
 /* About */
 .about {
   padding: 6rem 7% 1.4rem;
@@ -367,6 +369,29 @@ footer .credit a {
     font-size: 2rem;
   }
 
+  .hero {
+    flex-direction: column;
+  }
+  .hero .content {
+    margin-top: 5rem;
+    padding: 1rem 5%;
+    max-width: 100%;
+  }
+  .hero .content h1 {
+    font-size: 3em;
+  }
+  .hero .content p {
+    font-size: 1.2rem;
+  }
+  .hero .content .cta {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  .hero .home-img {
+    width: 50%;
+    height: 100px;
+    margin-top: 10px;
+  }
   .about .row {
     flex-wrap: wrap;
   }
