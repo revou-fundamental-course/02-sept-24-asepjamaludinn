@@ -1,6 +1,5 @@
 :root {
   --bg: #fff1dc;
-  --primary: #f71a06;
 }
 
 * {
@@ -76,44 +75,58 @@ body {
 .hero {
   min-height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-color: var(--bg);
 }
 
 .hero .content {
-  padding: 1.4rem 7%;
-  max-width: 60rem;
+  padding: 2rem 5%;
+  max-width: 70rem;
+  text-align: center;
 }
 
 .hero .content h1 {
-  font-size: 5em;
+  font-size: 6em;
   line-height: 1;
 }
 
 .hero .content h1 span {
   color: #ffb13b;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero .content p {
-  font-size: 1rem;
-  margin-top: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
   font-weight: 500;
 }
 
 .hero .content .cta {
-  margin-top: 1.3rem;
+  margin-top: 2rem;
   display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.4rem;
   color: #fff;
   background-color: #0e197af0;
   border-radius: 0.5rem;
-  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero .content .cta:hover {
+  background-color: #0e197af0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
 }
 
 /* About */
 .about {
-  padding: 6rem 7% 1.4rem;
+  padding: 5rem 7% 1.4rem;
+  border-radius: 10px;
 }
 
 .about h2 {
@@ -124,14 +137,22 @@ body {
 
 .about .row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .about .row .about-img {
   flex: 1 1 45rem;
+  margin-right: 20px;
 }
 
 .about .row .about-img img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .about .row .content {
@@ -153,6 +174,7 @@ body {
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.6;
+  color: #666;
 }
 
 /* Course */
@@ -216,66 +238,70 @@ body {
   text-align: center;
 }
 
-.judul-form-luas {
-  padding: 10rem 7% 1.4rem;
+.judul-form-luas,
+.judul-form-keliling {
+  background-color: #fff1dc;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.judul-form-luas .header-luas-segitiga {
-  text-align: center;
+.judul-form-luas header,
+.judul-form-keliling header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px 10px 0 0;
 }
 
-.judul-form-luas .header-luas-segitiga span {
+.judul-form-luas header h1,
+.judul-form-keliling header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.judul-form-luas header h1 span,
+.judul-form-keliling header h1 span {
   color: #ffb13b;
 }
 
-.judul-form-luas .input-wrapper {
-  border: 1px;
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
+.input-wrapper {
+  margin-bottom: 20px;
 }
 
-.judul-form-luas .input-wrapper > input {
-  width: 65%;
-  border: ridge;
+.input-wrapper label {
+  display: block;
+  margin-bottom: 10px;
 }
 
-.judul-form-luas .hasil {
-  border: ridge;
-  padding: 6px;
-  font-size: 1rem;
-  width: 10%;
+.input-wrapper input[type="number"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.judul-form-keliling {
-  padding: 10rem 7% 1.4rem;
+.hasil {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.judul-form-keliling .header-keliling-segitiga {
-  text-align: center;
+.hasil:hover {
+  background-color: #444;
 }
 
-.judul-form-keliling .header-keliling-segitiga span {
-  color: #0e197af0;
-}
-
-.judul-form-keliling .input-wrapper {
-  border: 1px;
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
-}
-
-.judul-form-keliling .input-wrapper > input {
-  width: 65%;
-  border: ridge;
-}
-
-.judul-form-keliling .hasil {
-  border: ridge;
-  padding: 6px;
-  font-size: 1rem;
-  width: 10%;
+#result-luas,
+#result-keliling {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 /* Footer */
