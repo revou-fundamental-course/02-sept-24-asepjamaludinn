@@ -66,10 +66,11 @@
             melatihmu untuk menyelesaikan berbagai soal dengan cepat dan tepat.
           </p>
           <p>
-            AJtics singkatan dari Asep Jamaludin Mathematics adalah solusi
-            menyeluruh bagi semua kebutuhan belajar matematikamu. Kami tidak
-            hanya fokus pada satu topik, tetapi memberikan materi pembelajaran
-            yang komprehensif mulai dari dasar hingga tingkat lanjut.
+            AJtics singkatan dari Asep Jamaludin<span> Mathematics</span> adalah
+            solusi menyeluruh bagi semua kebutuhan belajar matematikamu. Kami
+            tidak hanya fokus pada satu topik, tetapi memberikan materi
+            pembelajaran yang komprehensif mulai dari dasar hingga tingkat
+            lanjut.
           </p>
           <p>
             Dengan modul belajar yang terstruktur dan sistematis, kamu akan
@@ -85,74 +86,150 @@
 
     <!-- Course -->
     <section class="course" id="course">
+      <select id="shape-select">
+        <option value="segitiga">Segitiga</option>
+        <option value="jajargenjang">Jajar Genjang</option>
+      </select>
       <h2>Course</h2>
       <div class="soal-mtk">
-        <div class="segitiga-img">
-          <img src="assets/segitiga.png" alt="rumus-segitiga" />
+        <!-- Segitiga section -->
+        <div class="segitiga" id="segitiga">
+          <div class="segitiga-img">
+            <img src="assets/segitiga.png" alt="rumus-segitiga" />
+          </div>
+          <div class="formula-luas">
+            <h3>Rumus <span> Luas Segitiga</span></h3>
+            <br />
+            <p>
+              Luas = 1/2 × a × t <br />
+              Ket: <br />
+              a= alas segitiga <br />
+              t= tinggi segitiga
+            </p>
+          </div>
+          <div class="formula-keliling">
+            <h3>Rumus <span> Keliling Segitiga</span></h3>
+            <br />
+            <p>
+              Keliling = S1 + S2 + a <br />Ket: <br />
+              S1 = sisi a <br />
+              S2 = sisi b <br />
+              a = sisi c
+            </p>
+          </div>
+
+          <form class="judul-form-luas">
+            <header>
+              <h1 class="header-luas-segitiga">
+                Hitung <span>Luas Segitiga</span>
+              </h1>
+            </header>
+
+            <div class="input-wrapper">
+              <label for="alas">Panjang Alas</label>
+              <input id="alas" type="number" />
+            </div>
+            <div class="input-wrapper">
+              <label for="tinggi">Tinggi</label>
+              <input id="tinggi" type="number" />
+            </div>
+
+            <p id="result-luas">Hasil Perhitungan:</p>
+            <button class="hasil" id="hitung-luas">Hitung</button>
+          </form>
+
+          <form class="judul-form-keliling">
+            <header>
+              <h1 class="header-keliling-segitiga">
+                Hitung<span> Keliling Segitiga</span>
+              </h1>
+            </header>
+
+            <div class="input-wrapper">
+              <label for="a">Panjang sisi 1</label>
+              <input id="a" type="number" />
+            </div>
+            <div class="input-wrapper">
+              <label for="b">Panjang sisi 2</label>
+              <input id="b" type="number" />
+            </div>
+            <div class="input-wrapper">
+              <label for="c">Panjang sisi 3</label>
+              <input id="c" type="number" />
+            </div>
+
+            <p id="result-keliling">Hasil Perhitungan:</p>
+            <button class="hasil" id="hitung-keliling">Hitung</button>
+          </form>
         </div>
-        <div class="formula-luas">
-          <h3>Rumus <span> Luas Segitiga</span></h3>
-          <br />
-          <p>Luas = 1/2 × a × t</p>
-          <p>Ket:</p>
-          <p>a= alas segitiga</p>
-          <p>t= tinggi segitiga</p>
-        </div>
-        <div class="formula-keliling">
-          <h3>Rumus <span> Keliling Segitiga</span></h3>
-          <br />
-          <p>Keliling = S1 + S2 + a</p>
-          <p>Ket:</p>
-          <p>S1 = sisi a</p>
-          <p>S2 = sisi b</p>
-          <p>a = sisi c</p>
+
+        <!-- Jajar Genjang section -->
+        <div class="jajargenjang" id="jajargenjang">
+          <div class="jajargenjang-img">
+            <img src="assets/jajargenjang.png" alt="rumus-jajargenjang" />
+          </div>
+          <div class="formula-luas-jg">
+            <h3>Rumus <span> Luas Jajar Genjang</span></h3>
+            <br />
+            <p>
+              Luas = a × t <br />Ket: <br />a= alas jajar genjang <br />t=
+              tinggi jajar genjang
+            </p>
+          </div>
+          <div class="formula-keliling-jg">
+            <h3>Rumus <span> Keliling Jajar Genjang</span></h3>
+            <br />
+            <p>
+              Keliling = 2 × (a + b) <br />
+              Ket: <br />
+              a = sisi a <br />
+              b = sisi b
+            </p>
+          </div>
+          <form class="judul-form-luas">
+            <header>
+              <h1 class="header-luas-jajargenjang">
+                Hitung <span>Luas Jajargenjang</span>
+              </h1>
+            </header>
+
+            <div class="input-wrapper">
+              <label for="alasjg">Panjang Alas</label>
+              <input id="alasjg" type="number" />
+            </div>
+            <div class="input-wrapper">
+              <label for="tinggijg">Tinggi</label>
+              <input id="tinggijg" type="number" />
+            </div>
+
+            <p id="result-luas-jajargenjang">Hasil Perhitungan:</p>
+            <button class="hasil" id="hitung-luas-jajargenjang">Hitung</button>
+          </form>
+
+          <form class="judul-form-keliling">
+            <header>
+              <h1 class="header-keliling-jajargenjang">
+                Hitung<span> Keliling Jajargenjang</span>
+              </h1>
+            </header>
+
+            <div class="input-wrapper">
+              <label for="a-jajargenjang">Panjang sisi 1</label>
+              <input id="a-jajargenjang" type="number" />
+            </div>
+            <div class="input-wrapper">
+              <label for="b-jajargenjang">Panjang sisi 2</label>
+              <input id="b-jajargenjang" type="number" />
+            </div>
+
+            <p id="result-keliling-jajargenjang">Hasil Perhitungan:</p>
+            <button class="hasil" id="hitung-keliling-jajargenjang">
+              Hitung
+            </button>
+          </form>
         </div>
       </div>
     </section>
-    <hr />
-
-    <form class="judul-form-luas">
-      <header>
-        <h1 class="header-luas-segitiga">Hitung <span>Luas Segitiga</span></h1>
-      </header>
-
-      <div class="input-wrapper">
-        <label for="alas">Panjang Alas</label>
-        <input id="alas" type="number" />
-      </div>
-      <div class="input-wrapper">
-        <label for="tinggi">Tinggi</label>
-        <input id="tinggi" type="number" />
-      </div>
-
-      <p id="result-luas">Hasil Perhitungan:</p>
-      <button class="hasil" id="hitung-luas">Hitung</button>
-    </form>
-
-    <form class="judul-form-keliling">
-      <header>
-        <h1 class="header-keliling-segitiga">
-          Hitung<span> Keliling Segitiga</span>
-        </h1>
-      </header>
-
-      <div class="input-wrapper">
-        <label for="a">Panjang sisi 1</label>
-        <input id="a" type="number" />
-      </div>
-      <div class="input-wrapper">
-        <label for="b">Panjang sisi 2</label>
-        <input id="b" type="number" />
-      </div>
-      <div class="input-wrapper">
-        <label for="c">Panjang sisi 3</label>
-        <input id="c" type="number" />
-      </div>
-
-      <p id="result-keliling">Hasil Perhitungan:</p>
-      <button class="hasil" id="hitung-keliling">Hitung</button>
-    </form>
-
     <!-- Course End -->
 
     <!-- Footer Start -->

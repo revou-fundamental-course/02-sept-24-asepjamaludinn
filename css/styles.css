@@ -177,9 +177,45 @@ body {
   color: #666;
 }
 
+.about .row .content p span {
+  font-style: italic;
+}
+
 /* Course */
+
+#shape-select {
+  appearance: none;
+  background-image: linear-gradient(to bottom, #ffb13b, #ffa07a);
+  border: none;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+}
+
+#shape-select:hover {
+  background-image: linear-gradient(to bottom, #ffa07a, #ff9900);
+}
+
+#shape-select option {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 20px;
+  font-size: 18px;
+}
+
+#shape-select option:hover {
+  background-color: #f7f7f7;
+}
+
 .course {
-  padding: 14rem 10.4rem;
+  margin-top: 10rem;
+  padding: 7.2rem 10.4rem;
 }
 
 .course h2 {
@@ -188,57 +224,86 @@ body {
   margin-bottom: 3rem;
 }
 
-.course .soal-mtk {
-  display: flex;
-}
-
-.course .soal-mtk .segitiga-img {
-  flex: 0;
-}
-
-.course .formula-luas {
-  padding-top: 5rem;
-  margin-left: 7rem;
-}
-
-.course .formula-keliling {
-  padding-top: 5rem;
-  margin-left: 7rem;
-}
-
-.course .soal-mtk .formula-luas h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.course .soal-mtk .formula-keliling h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.course .soal-mtk .formula-luas h3 span {
-  color: #ffb13b;
-}
-
-.course .soal-mtk .formula-keliling h3 span {
-  color: #0e197af0;
-}
-
-.course .soal-mtk .formula-luas p {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.course .soal-mtk .formula-keliling p {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.course .form-header-luas-segitiga h1 {
+.course .segitiga-img {
   text-align: center;
 }
 
-/* form keliling-luas */
+.course .segitiga-img img {
+  height: 23rem;
+}
+.course .formula-luas,
+.course .formula-keliling {
+  padding-top: 5rem;
+}
+
+.course .formula-luas h3,
+.course .formula-keliling h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.course .formula-luas h3 span {
+  color: #ffb13b;
+}
+.course .formula-keliling h3 span {
+  color: #0e197af0;
+}
+
+.course .formula-luas p,
+.course .formula-keliling p {
+  line-height: 4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: center;
+}
+
+.course .jajargenjang {
+  display: none;
+}
+
+.course .jajargenjang-img {
+  text-align: center;
+}
+
+.course .jajargenjang-img img {
+  height: 23rem;
+}
+
+.course .formula-luas-jg,
+.course .formula-keliling-jg {
+  padding-top: 5rem;
+}
+
+.course .formula-luas-jg h3,
+.course .formula-keliling-jg h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.course .formula-luas-jg h3 span {
+  color: #ffb13b;
+}
+
+.course .formula-keliling-jg h3 span {
+  color: #0e197af0;
+}
+
+.course .formula-luas-jg p,
+.course .formula-keliling-jg p {
+  line-height: 4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-left: 40rem;
+  margin-right: 50rem;
+  text-align: center;
+}
+
+/* Form Section */
+
 .judul-form-luas,
 .judul-form-keliling {
   padding: 20px;
@@ -263,9 +328,11 @@ body {
   margin: 0;
 }
 
-.judul-form-luas header h1 span,
-.judul-form-keliling header h1 span {
+.judul-form-luas header h1 span {
   color: #ffb13b;
+}
+.judul-form-keliling header h1 span {
+  color: #424cadfc;
 }
 
 .input-wrapper {
@@ -281,7 +348,7 @@ body {
   width: 100%;
   height: 40px;
   padding: 10px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 5px;
 }
 
@@ -304,6 +371,11 @@ body {
   margin-bottom: 20px;
 }
 
+#result-luas-jajargenjang,
+#result-keliling-jajargenjang {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 /* Footer */
 footer {
   background-color: rgba(1, 1, 1, 0.9);
@@ -434,15 +506,77 @@ footer .credit a {
     font-size: 1.7rem;
   }
 
-  .course .soal-mtk {
-    flex-wrap: wrap;
+  .course {
+    padding: 2rem 1.6rem;
+  }
+  .course h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .course .segitiga-img {
+    text-align: center;
   }
 
-  .course .soal-mtk .segitiga-img img {
-    height: 25rem;
-    object-fit: cover;
+  .course .segitiga-img img {
+    height: 15rem;
+  }
+
+  .course .formula-luas,
+  .course .formula-keliling {
+    padding-top: 1.5rem;
+  }
+  .course .formula-luas h3,
+  .course .formula-keliling h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .course .formula-luas h3 span {
+    color: #ffb13b;
+  }
+  .course .formula-keliling h3 span {
+    color: #0e197af0;
+  }
+  .course .formula-luas p,
+  .course .formula-keliling p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
+.course .jajargenjang-img {
+  text-align: center;
+}
+.course .jajargenjang-img img {
+  height: 12rem;
+}
+.course .formula-luas-jg,
+.course .formula-keliling-jg {
+  padding-top: 1.5rem;
+}
+.course .formula-luas-jg h3,
+.course .formula-keliling-jg h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+.course .formula-luas-jg h3 span {
+  color: #ffb13b;
+}
+.course .formula-keliling-jg h3 span {
+  color: #0e197af0;
+}
+.course .formula-luas-jg p,
+.course .formula-keliling-jg p {
+  line-height: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  margin-left: 10rem;
+  margin-right: 15rem;
+  text-align: center;
+}
+
 /* Hp */
 @media (max-width: 450px) {
   html {

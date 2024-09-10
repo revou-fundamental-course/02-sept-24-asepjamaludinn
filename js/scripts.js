@@ -15,6 +15,22 @@ document.addEventListener("click", function (e) {
   }
 });
 
+const shapeSelect = document.getElementById("shape-select");
+const segitigaSection = document.getElementById("segitiga");
+const jajargenjangSection = document.getElementById("jajargenjang");
+
+shapeSelect.addEventListener("change", function () {
+  const selectedValue = shapeSelect.value;
+
+  if (selectedValue === "segitiga") {
+    segitigaSection.style.display = "block";
+    jajargenjangSection.style.display = "none";
+  } else if (selectedValue === "jajargenjang") {
+    segitigaSection.style.display = "none";
+    jajargenjangSection.style.display = "block";
+  }
+});
+
 // luas segitiga
 const hitungLuasButton = document.getElementById("hitung-luas");
 
@@ -45,5 +61,39 @@ hitungKelilingButton.addEventListener("click", (e) => {
   Keliling =  S1 + S2 + a <br>
   Keliling = ${a} +  ${b} + ${c} <br>
   Keliling = ${keliling}
+  `;
+});
+
+// Luas jajargenjang
+const hitungLuasJGButton = document.getElementById("hitung-luas-jajargenjang");
+
+hitungLuasJGButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const alas = document.getElementById("alasjg").value;
+  const tinggi = document.getElementById("tinggijg").value;
+  const luas = alas * tinggi;
+  document.getElementById("result-luas-jajargenjang").innerHTML = `
+  Hasil Perhitungan: <br>
+  Luas jajargenjang = a x t <br>
+  Luas jajargenjang = ${alas} x ${tinggi} <br>
+  Luas jajargenjang = ${luas}
+  `;
+});
+
+// keliling jajargenjang
+const hitungKelilingJGButton = document.getElementById(
+  "hitung-keliling-jajargenjang"
+);
+
+hitungKelilingJGButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const a = parseFloat(document.getElementById("a-jajargenjang").value);
+  const b = parseFloat(document.getElementById("b-jajargenjang").value);
+  const keliling = 2 * (a + b);
+  document.getElementById("result-keliling-jajargenjang").innerHTML = `
+  Hasil Perhitungan: <br>
+  Keliling Jajargenjang = 2 x ( a + b ) <br>
+  Keliling Jajargenjang = 2 x (${a} + ${b}) <br>
+  Keliling Jajargenjang = ${keliling}
   `;
 });
