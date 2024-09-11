@@ -15,6 +15,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// shapes
 const shapeSelect = document.getElementById("shape-select");
 const segitigaSection = document.getElementById("segitiga");
 const jajargenjangSection = document.getElementById("jajargenjang");
@@ -38,6 +39,12 @@ hitungLuasButton.addEventListener("click", (e) => {
   e.preventDefault();
   const alas = document.getElementById("alas").value;
   const tinggi = document.getElementById("tinggi").value;
+
+  if (alas == "" || tinggi == "") {
+    alert("Form masih kosong!");
+    return;
+  }
+
   const luas = (1 / 2) * (alas * tinggi);
   document.getElementById("result-luas").innerHTML = `
   Hasil Perhitungan: <br>
@@ -55,6 +62,12 @@ hitungKelilingButton.addEventListener("click", (e) => {
   const a = parseInt(document.getElementById("a").value);
   const b = parseInt(document.getElementById("b").value);
   const c = parseInt(document.getElementById("c").value);
+
+  if (isNaN(a) || isNaN(b) || isNaN(c)) {
+    alert("Form masih kosong!");
+    return;
+  }
+
   const keliling = a + b + c;
   document.getElementById("result-keliling").innerHTML = `
   Hasil Perhitungan: <br>
@@ -71,6 +84,12 @@ hitungLuasJGButton.addEventListener("click", (e) => {
   e.preventDefault();
   const alas = document.getElementById("alasjg").value;
   const tinggi = document.getElementById("tinggijg").value;
+
+  if (alas == "" || tinggi == "") {
+    alert("Form masih kosong!");
+    return;
+  }
+
   const luas = alas * tinggi;
   document.getElementById("result-luas-jajargenjang").innerHTML = `
   Hasil Perhitungan: <br>
@@ -89,7 +108,12 @@ hitungKelilingJGButton.addEventListener("click", (e) => {
   e.preventDefault();
   const a = parseFloat(document.getElementById("a-jajargenjang").value);
   const b = parseFloat(document.getElementById("b-jajargenjang").value);
-  const keliling = 2 * (a + b);
+
+  if (isNaN(a) || isNaN(b)) {
+    alert("Form masih kosong!");
+    return;
+  }
+  const keliling = 2 * (parseFloat(a) + parseFloat(b));
   document.getElementById("result-keliling-jajargenjang").innerHTML = `
   Hasil Perhitungan: <br>
   Keliling Jajargenjang = 2 x ( a + b ) <br>
